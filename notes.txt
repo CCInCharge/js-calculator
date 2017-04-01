@@ -1,0 +1,32 @@
+Construct an input string
+Perform input validation each time a new button is pressed
+
+Types of buttons:
+- Digits
+- Decimal
+- AC
+- Operand
+- Equals
+
+Input validation rules:
+- Equals sign will do nothing if the last input was an operator
+- Decimal sign can be used only once per number
+- - A number is defined as a set of digits between operands
+- - If there are no operands, the entire input is one number
+- Operands must not be next to another operand
+- Operands can only be inserted after a digit
+
+Functionality of code:
+1. Construct a valid mathematical operation from the user input
+2. Evaluate the expression and show it on the screen
+
+If user has just hit enter, clear the input string prior to the
+next button press
+
+Variables:
+Input string
+
+Functions:
+- Display a string on the calculator display
+- Update the input string
+- - Validate the input string
