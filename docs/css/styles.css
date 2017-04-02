@@ -1,0 +1,46 @@
+button {
+  width: 60px;
+  height: 50px;
+  border-color: white;
+  color: black;
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+button:focus {
+  outline: none;
+}
+
+
+#githubButton {
+  background: url('../github.png') no-repeat top left;
+  background-size: 40px 40px;
+  background-position: center;
+  background-color: white;
+  color: transparent;
+}
+
+
+#ACbutton {
+  background-color: red;
+}
+
+.opButton {
+  background-color: orange;
+}
+
+#calculator {
+  width: 350px;
+  background-color: #FAD6B1;
+}
+
+#buttons {
+  width: 325px;
+  height: auto;
+  margin: 0 auto;
+}
+
+#display {
+  background-color: blue;
+  height: 50px;
+}
