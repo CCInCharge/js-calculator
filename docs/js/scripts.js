@@ -1,4 +1,4 @@
-var inputString = "0";
+var inputString = "";
 var result = 0;
 
 /*
@@ -27,14 +27,7 @@ function updateStr(newChar) {
   /* If input is a digit, allow */
   if (newChar.match(/[0-9]/))
   {
-    if (inputString === "0")
-    {
-      inputString = newChar;
-    }
-    else
-    {
-      addChar(newChar);
-    }
+    addChar(newChar);
     showResult(inputString);
     return;
   }
@@ -55,7 +48,7 @@ function updateStr(newChar) {
     {
       result = evalString();
       showResult(inputString + "=" + result.toString());
-      inputString = "0";
+      inputString = "";
     }
     return;
   }
@@ -81,14 +74,11 @@ function updateStr(newChar) {
     /* Current number is from the last operator to the last index */
     if (! (inputString.substring(lastOp, inputString.length).match(/[.]/)) )
     {
-      if (inputString === "0")
+      if (inputString.length === 0)
       {
-        inputString = ".";
+        addChar("0");
       }
-      else
-      {
-        addChar(newChar);
-      }
+      addChar(".");
       showResult(inputString);
     }
     return;
@@ -96,6 +86,7 @@ function updateStr(newChar) {
 }
 
 $(document).ready(function(){
+  showResult("0");
   $("button[value=1]").click(function(){
     updateStr("1");
   });
@@ -145,7 +136,7 @@ $(document).ready(function(){
     updateStr("=");
   });
   $('button[value="AC"]').click(function(){
-    inputString = "0";
+    inputString = "";
     showResult("0");
   });
 });
