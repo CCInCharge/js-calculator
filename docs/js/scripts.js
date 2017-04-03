@@ -1,5 +1,6 @@
 var inputString = "";
 var result = 0;
+var MAXLENGTH = 29;
 
 /*
 Input validation rules:
@@ -16,11 +17,21 @@ function evalString() {
 }
 
 function addChar(newChar) {
-  inputString += newChar;
+  if (inputString.length < MAXLENGTH)
+  {
+    inputString += newChar;
+  }
 }
 
 function showResult(char) {
-  $("#display").html(char);
+  if (char.length > MAXLENGTH)
+  {
+    $("#display").html("OVERFLOW");
+  }
+  else
+  {
+    $("#display").html(char);
+  }
 }
 
 function updateStr(newChar) {

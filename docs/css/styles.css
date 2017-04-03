@@ -1,3 +1,11 @@
+@font-face {
+  font-family: digital-7;
+  src: url('../fonts/digital-7.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
 button {
   width: 60px;
   height: 50px;
@@ -31,19 +39,26 @@ button:focus {
 
 #calculator {
   width: 350px;
-  background-color: #FAD6B1;
+  border-style: solid;
+  border-color: black;
+  background-color: white;
 }
 
 #buttons {
   width: 325px;
   height: auto;
   margin: 0 auto;
+  padding: 10px;
 }
 
 #display {
-  background-color: blue;
+  background-color: white;
+  border-style: solid;
+  border-color: white white black white;
   height: 50px;
   line-height: 50px;
   text-align: right;
   vertical-align: middle;
+  font-family: digital-7;
+  font-size: 25px;
 }
