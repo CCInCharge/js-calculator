@@ -139,4 +139,7 @@ $(document).ready(function(){
     inputString = "";
     showResult("0");
   });
+  $('button[value="github"]').click(function(){
+    window.open("https://github.com/CCInCharge/js-calculator");
+  });
 });
